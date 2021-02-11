@@ -1,0 +1,18 @@
+.cart-item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+.shopping-cart{
+  float: right;
+  color: #9965f4;
+  background-color: black;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  display: inline;
+  justify-content: center;
+  line-height: 3;
+  outline:none;
+  padding-right: 6px;
+}

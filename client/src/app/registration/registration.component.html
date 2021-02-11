@@ -1,0 +1,79 @@
+<div class="registration-container">
+  <mat-card class="registration-card">
+    <mat-card-header>
+      <mat-card-title>Registration</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="registrationForm">
+            <div fxLayout="column">
+
+              <mat-error *ngIf="this.errorMessage != null">{{this.errorMessage}}</mat-error>
+
+              <mat-form-field>
+                <input
+                  autocomplete="off"
+                  matInput
+                  formControlName="email"
+                  placeholder="Email"
+                  type="email">
+                <mat-error *ngIf="registrationForm.get('email').hasError('required')">Email is required</mat-error>
+                <mat-error *ngIf="registrationForm.get('email').hasError('email')">Email must looks like email</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  autocomplete="off"
+                  matInput
+                  formControlName="username"
+                  placeholder="User name">
+                <mat-error *ngIf="registrationForm.get('username').hasError('required')">Username is required</mat-error>
+                <mat-error *ngIf="registrationForm.get('username').hasError('minlength')">Username length is minimum 6 characters</mat-error>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  autocomplete="off"
+                  matInput
+                  formControlName="city"
+                  placeholder="City">
+                <mat-error *ngIf="registrationForm.get('city').hasError('required')">City is required</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  autocomplete="off"
+                  matInput
+                  formControlName="street"
+                  placeholder="Street">
+                <mat-error *ngIf="registrationForm.get('street').hasError('required')">Street is required</mat-error>
+              </mat-form-field>
+
+        <mat-form-field>
+          <input
+            autocomplete="off"
+            matInput
+            formControlName="password"
+            placeholder="Password"
+            type="password"
+            required>
+          <mat-error *ngIf="registrationForm.get('password').hasError('required')">Password is required</mat-error>
+          <mat-error *ngIf="registrationForm.get('password').hasError('minlength')">Password length is minimum 6 characters</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            autocomplete="off"
+            matInput
+            formControlName="repeatPassword"
+            placeholder="Repeat password"
+            type="password"
+            required
+            [errorStateMatcher]="matcher">
+          <mat-error *ngIf="registrationForm.hasError('notSame')">Passwords do not match</mat-error>
+        </mat-form-field>
+            </div>
+          <mat-card-actions>
+            <button mat-raised-button primary (click)="register()">Create account</button>
+          </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="dialog">
+  <mat-dialog-title><div class="large-text">Accept order</div></mat-dialog-title>
+  <mat-divider></mat-divider>
+    <mat-dialog-content>
+        Pass delivery time in minutes:
+
+          <input [(ngModel)]="deliveryTimeInMinutes"  matInput type="number" class="mat-form-field" >
+
+      <mat-dialog-actions>
+        <button mat-raised-button style="background-color: green" [mat-dialog-close]="deliveryTimeInMinutes">Accept</button>
+        <button mat-raised-button style="background-color: red" (click)="cancel()">Cancel</button>
+      </mat-dialog-actions>
+    </mat-dialog-content>
+</div>
+

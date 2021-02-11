@@ -1,0 +1,96 @@
+.actions-buttons {
+  height: 30px;
+  padding: 1rem;
+}
+.cards-content {
+  justify-content: center;
+  padding-top: 6rem;
+  display:block;
+}
+.cards-content > mat-card {
+  width: 200px;
+}
+.test{
+  box-sizing: border-box;
+  max-width: 25%;
+  padding: 0px 1rem 1rem 0px
+}
+.pizza-card{
+  width: auto;
+}
+.add-button{
+  float: right;
+  color: #9965f4;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  display: inline;
+  justify-content: center;
+  line-height: 3;
+  outline:none;
+  padding-right: 6px;
+}
+.addToCartButton{
+  padding: 0 16px;
+  border-radius: 4px;
+  margin-right: 1rem;
+  color: black;
+  max-height: 40px;
+  border-left: none !important;
+  width: 100%;
+}
+.mat-button-toggle-group{
+  border: none;
+  line-height: 0;
+}
+.mat-button-toggle-checked.mat-button-toggle-appearance-standard{
+  background-color:  #9965f4;
+  margin-right: 1rem;
+  color: white;
+}
+.item-text{
+  font-weight: 500;
+  font-size: x-large;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.mat-card-image{
+  height: 15vh;
+}
+.mat-card-content{
+  height: 10vh;
+}
+
+.mat-card-image{
+  margin: 0 -16px 0px -16px;
+}
+.price{
+  font-size: x-large;
+  text-align: center;
+  padding-bottom: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  right: 1%;
+}
+@media (max-width: 750px) {
+  .add-button {
+    justify-content: center;
+    float: none;
+  }
+  .mat-button-toggle{
+    margin-bottom: 10px !important;
+  }
+  .cards-content{
+    margin-top: 50px !important;
+  }
+  .mat-card-image{
+    height: 25vh;
+  }
+  .button{
+    padding: 0;
+  }
+  .actions-buttons{
+    padding: 0;
+  }
+}

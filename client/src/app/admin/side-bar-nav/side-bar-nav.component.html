@@ -1,0 +1,29 @@
+
+<mat-drawer-container class="sidenav-container" autosize>
+  <mat-drawer mode="side" disableClose="true" opened="true">
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon (click)="isExpanded = !isExpanded" mat-list-icon>menu</mat-icon>
+        <h4 mat-line *ngIf="isExpanded"></h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon routerLink="dashboard" routerLinkActive="active-icon">dashboard</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Dashboard</h4>
+      </mat-list-item>
+      <mat-list-item >
+        <mat-icon mat-list-icon routerLink="orders" routerLinkActive="active-icon">receipt_long</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Orders</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon routerLink="menuManagement" routerLinkActive="active-icon">food_bank</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Menus</h4>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+
+    <mat-toolbar>
+      <span>Admin dashboard</span>
+    </mat-toolbar>
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div></mat-drawer-container>

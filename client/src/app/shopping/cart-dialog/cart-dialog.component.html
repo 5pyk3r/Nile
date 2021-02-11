@@ -1,0 +1,45 @@
+  <div class="cart-dialog">
+    <mat-dialog-content>
+      <mat-dialog-title color="primary">
+        <h1>Shopping cart</h1>
+      </mat-dialog-title>
+      <mat-divider></mat-divider>
+      <div *ngIf="cart.orderProducts.length === 0" class="no-products-container">
+          <div class="cart-info">
+            <mat-icon class="cart-icon">shopping_cart</mat-icon>
+            <h1>Shopping cart is empty.</h1>
+          </div>
+      </div>
+      <div class="cart-items">
+        <div *ngFor="let item of cart.orderProducts">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="item" >
+          <div class ="large-text">
+            {{ item.product.name }}
+          </div>
+          <div class ="large-text">
+            {{ item.product.price | currency : 'USD' }}
+          </div>
+          <div fxLayout="row" fxLayoutAlign="space-around center" >
+            <button class="quantity-button" (click)="decrease(item)"><mat-icon>remove_circle</mat-icon></button>
+            <input matInput type="number" placeholder="0" class="input-quantity" value="{{item.quantity}}" min="0">
+            <button class="quantity-button" (click)="increase(item)"><mat-icon>add_circle</mat-icon></button>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+      </div>
+      <button  mat-raised-button class="button" (click)="clearCart()"><mat-icon>remove_shopping_cart</mat-icon>Clear cart</button>
+
+    </mat-dialog-content>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="summary">
+      <div class ="totalPrice-text">TOTAL: </div>
+      <div class ="totalPrice-text">{{cart.totalPrice | currency : 'USD'}}</div>
+
+    </div>
+    <mat-dialog-actions>
+      <div fxLayout="row" fxLayoutAlign="end" class="cart-buttons-container">
+        <button mat-raised-button class="cart-button" (click)="closeDialog()"><div class="large-text">Continue shopping</div></button>
+        <button mat-raised-button class="cart-button" (click)="openCheckout()"><div class="large-text">Create Order</div></button>
+      </div>
+    </mat-dialog-actions>
+  </div>

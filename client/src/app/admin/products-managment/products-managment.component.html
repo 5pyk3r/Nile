@@ -1,0 +1,30 @@
+<div class="content">
+  <h2>Products list</h2>
+  <mat-divider></mat-divider>
+
+  <mat-table matSort [dataSource]="products">
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let row"><div class="large-text"> {{row.name}}</div> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
+      <mat-cell *matCellDef="let row"> <div class="large-text">{{row.price | currency : 'USD'}} </div></mat-cell>
+    </ng-container>
+
+    <ng container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+      <mat-cell *matCellDef="let row"><button mat-icon-button (click)="editProduct(row)"><mat-icon style="color: #6772E5">create</mat-icon></button>
+        <button mat-icon-button (click)="deleteProductById(row.id)"><mat-icon style="color: red">delete</mat-icon></button>
+
+      </mat-cell>
+    </ng>
+    <mat-header-row *matHeaderRowDef="[ 'name', 'price', 'actions']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: [ 'name', 'price', 'actions']"></mat-row>
+  </mat-table>
+
+</div>
+<button class="floatingButton" (click)="openProductDialog()">
+  <mat-icon>add</mat-icon></button>

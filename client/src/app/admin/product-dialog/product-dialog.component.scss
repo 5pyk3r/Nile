@@ -1,0 +1,43 @@
+.recipe-dialog{
+  height: 300px;
+  width: 350px;
+}
+.mat-form-field{
+  width: 100%;
+}
+.mat-dialog-title{
+  font-size: large;
+  font-weight: 500;
+  padding: 15px;
+}
+.mat-icon{
+  width: 40px;
+  height: 40px;
+  color: orange;
+}
+.uploadContainer{
+  padding-right: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.sendFile{
+  padding-right: 12px;
+}
+.saveButton{
+  color: white;
+  background-color: #9965f4;
+}
+.alert-danger {
+  color: #f44336;
+}
+@media (max-width: 750px) {
+  .recipe-dialog{
+    height: 100vh;
+    width: 100vw;
+  }
+}
+.mat-dialog-actions{
+  float: right;
+}

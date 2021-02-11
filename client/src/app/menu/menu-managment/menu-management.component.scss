@@ -1,0 +1,23 @@
+.menu-card{
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+}
+.uploadContainer{
+  padding-right: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.sendFile{
+  padding-right: 12px;
+}
+.mat-icon{
+  font-size: 30px;
+}
+
