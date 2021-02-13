@@ -1,4 +1,4 @@
-package pl.server.controllers;
+package pl.server.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +10,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import pl.server.models.Address;
-import pl.server.models.LoginUser;
-import pl.server.models.Role;
-import pl.server.models.User;
+import pl.server.model.Address;
+import pl.server.model.LoginUser;
+import pl.server.model.Role;
+import pl.server.model.User;
 import pl.server.repository.RoleRepository;
 import pl.server.repository.UserRepository;
 import pl.server.security.jwt.JwtTokenUtil;
@@ -39,9 +39,6 @@ public class UserController {
     @Autowired
     private RoleRepository roleRepository;
 
-//    @Autowired
-//    private AddressRepository addressRepository;
-
     @Autowired
     JwtTokenUtil jwtTokenUtils;
 
@@ -50,7 +47,7 @@ public class UserController {
 
     @PostMapping(path = "/login", consumes = "multipart/form-data")
     public ResponseEntity<?> loginUser(@RequestParam("loginUser") String data) throws IOException, NullPointerException{
-        LoginUser user = new ObjectMapper().readValue(data, LoginUser.class);
+         LoginUser user = new ObjectMapper().readValue(data, LoginUser.class);
 
         if(!userRepository.existsByEmail(user.getEmail())){
             return ResponseEntity.badRequest().body("User with this email is not exist");

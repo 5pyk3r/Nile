@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.server.models.User;
+import pl.server.model.User;
 
 import java.io.Serializable;
 

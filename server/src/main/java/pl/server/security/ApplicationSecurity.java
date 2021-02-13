@@ -52,7 +52,7 @@ public class ApplicationSecurity  extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();
         http.cors().and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers("/", "/register", "/login", "/h2-console/**", "*", "/menu/**", "/order/**", "/orderProduct/**").permitAll()
+                .authorizeRequests().antMatchers("/", "/register", "/login", "/h2-console/**", "*", "/products/**", "/order/**", "/orderProduct/**", "/**", "/categories/**").permitAll()
                 .antMatchers("/newPizza", "/update").hasRole("ADMIN")
                 .anyRequest().authenticated();
 

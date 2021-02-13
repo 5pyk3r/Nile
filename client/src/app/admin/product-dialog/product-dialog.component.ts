@@ -25,10 +25,12 @@ export class ProductDialogComponent implements OnInit {
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
       name: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
       price: new FormControl('', [Validators.required]),
       fileName: new FormControl('', [Validators.required])
     });
     this.productForm.get('name').setValue(this.product?.name);
+    this.productForm.get('description').setValue(this.product?.description);
     this.productForm.get('price').setValue(this.product?.price);
     this.productForm.get('fileName').setValue(this.product?.fileName);
 
@@ -48,6 +50,7 @@ export class ProductDialogComponent implements OnInit {
     const product: any = {
       id: this.product?.id,
       name : this.productForm.controls.name.value,
+      description: this.productForm.controls.description.value,
       fileName: this.currentFileUpload?.name,
       price: this.productForm.controls.price.value,
     };

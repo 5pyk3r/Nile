@@ -39,6 +39,9 @@ import { OrderAcceptationStatusDialogComponent } from './admin/order-acceptation
 import {MatMenuModule} from '@angular/material/menu';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import {CoreModule} from './core/core.module';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
+import { CategoriesComponent } from './admin/categories/categories.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +61,8 @@ import {CoreModule} from './core/core.module';
     ProductDialogComponent,
     OrdersListComponent,
     OrderAcceptationStatusDialogComponent,
-    UserPanelComponent
+    UserPanelComponent,
+    CategoriesComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   imports: [
@@ -89,7 +93,9 @@ import {CoreModule} from './core/core.module';
     MatTableModule,
     FormsModule,
     MatMenuModule,
-    CoreModule
+    CoreModule,
+    MatPaginatorModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,

@@ -7,7 +7,7 @@ import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import pl.server.models.User;
+import pl.server.model.User;
 
 import java.util.Collection;
 import java.util.List;

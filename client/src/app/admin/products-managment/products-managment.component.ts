@@ -1,27 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {ProductService} from '../../core/services/productService/product.service';
 import {ProductDialogComponent} from '../product-dialog/product-dialog.component';
+import {CategoryService} from '../../core/services/categoryService/category.service';
+import { Category } from 'src/app/core/model/category';
+import {Product} from '../../core/model/product';
+
 
 @Component({
   selector: 'app-products-managment',
   templateUrl: './products-managment.component.html',
   styleUrls: ['./products-managment.component.scss']
 })
-export class ProductsManagmentComponent implements OnInit {
+export class ProductsManagmentComponent implements OnInit{
 
-  constructor(public matDialog: MatDialog, public productService: ProductService) { }
+  constructor(public matDialog: MatDialog, public productService: ProductService, public categoryService: CategoryService) { }
 
-  products: any;
-
-
+  products: Product[];
   dateFrom: Date;
   dateTo: Date;
-  todayEarnings: any;
+  categories: Category[];
+  selectedCategory: string;
 
   ngOnInit(): void {
-    this.getProducts();
-
+    this.getCategories();
 
     this.dateFrom = new Date();
     this.dateFrom.setHours(0);
@@ -34,8 +36,16 @@ export class ProductsManagmentComponent implements OnInit {
     this.dateTo.setMilliseconds(0);
   }
 
+  onCategoryChange(selectedCategory){
+   this.getProducts();
+  }
+
   getProducts(): void{
-    this.products = this.productService.findAllProducts();
+    this.productService.findAllProductsByCategory(this.selectedCategory).subscribe(data => this.products = data);
+  }
+
+  getCategories(): void{
+    this.categoryService.findAllCategories().subscribe(data => this.categories = data);
   }
 
   openProductDialog(): void{

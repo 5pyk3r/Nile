@@ -11,6 +11,7 @@ import {CheckoutComponent} from '../shopping/checkout/checkout.component';
 import {ProductsManagmentComponent} from '../admin/products-managment/products-managment.component';
 import {OrdersListComponent} from '../admin/orders-list/orders-list.component';
 import {UserPanelComponent} from '../user-panel/user-panel.component';
+import {CategoriesComponent} from '../admin/categories/categories.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,
@@ -26,9 +27,9 @@ const routes: Routes = [
     canActivate: [RoleGuardService],
     data: {roles: 'ROLE_ADMIN'},
     children: [
-      {path: 'menuManagement', component: ProductsManagmentComponent},
-      {path: 'orders', component: OrdersListComponent}
-
+      {path: 'products', component: ProductsManagmentComponent},
+      {path: 'orders', component: OrdersListComponent},
+      {path: 'categories', component: CategoriesComponent}
     ]
   },
 ];

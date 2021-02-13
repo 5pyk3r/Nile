@@ -1,7 +1,7 @@
 package pl.server.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.server.models.User;
+import pl.server.model.User;
 
 import java.util.Optional;
 

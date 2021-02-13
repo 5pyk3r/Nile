@@ -1,4 +1,4 @@
-package pl.server.models;
+package pl.server.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

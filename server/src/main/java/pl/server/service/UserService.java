@@ -1,8 +1,8 @@
-package pl.server.services;
+package pl.server.service;
 
 import pl.server.dto.AddressDto;
 import pl.server.dto.UserDto;
-import pl.server.models.Role;
+import pl.server.model.Role;
 
 import java.util.Set;
 

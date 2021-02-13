@@ -15,8 +15,12 @@
         <h4 mat-line *ngIf="isExpanded">Orders</h4>
       </mat-list-item>
       <mat-list-item>
-        <mat-icon mat-list-icon routerLink="menuManagement" routerLinkActive="active-icon">food_bank</mat-icon>
-        <h4 mat-line *ngIf="isExpanded">Menus</h4>
+        <mat-icon mat-list-icon routerLink="products" routerLinkActive="active-icon">add_box</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Products</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon routerLink="categories" routerLinkActive="active-icon">category</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Categories</h4>
       </mat-list-item>
     </mat-nav-list>
   </mat-drawer>
