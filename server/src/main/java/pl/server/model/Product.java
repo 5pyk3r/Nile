@@ -1,5 +1,4 @@
-package pl.server.models;
-
+package pl.server.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,19 +6,22 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Setter
 @Getter
-public class OrderProduct {
+@Setter
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private Product product;
+    @Column(unique = true)
+    private String name;
+
+    private double price;
+
+    private String fileName;
 
     @ManyToOne
-    private Order order;
+    private Category category;
 
-    private Integer quantity;
 }

@@ -1,9 +1,9 @@
-package pl.server.services;
+package pl.server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.server.dto.AddressDto;
 import pl.server.dto.UserDto;
-import pl.server.models.Role;
+import pl.server.model.Role;
 import pl.server.repository.UserRepository;
 
 import java.util.Set;

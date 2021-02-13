@@ -1,4 +1,4 @@
-package pl.server.models;
+package pl.server.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package pl.server.services;
+package pl.server.service;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;

@@ -17,16 +17,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 50px;
   bottom: 20px;
   right: 20px;
-  background-color:  #ee9b02;
+  background-color:  dodgerblue;
   color: #FFF;
   border-radius: 50px;
+  /*border-style: solid;*/
+  /*border-width: thin;*/
   border: none;
   box-shadow: 2px 2px 3px #999;
   outline: none;
   transition: backgroud 0.25s;
 }
 .floatingButton:active{
-  background-color: orange;
+  background-color: grey;
 }
 .button.mat-focus-indicator.button.mat-raised-button.mat-button-base{
   margin: 2px;
