@@ -35,12 +35,10 @@ public class ApplicationSecurity  extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
-
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -52,7 +50,7 @@ public class ApplicationSecurity  extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();
         http.cors().and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers("/", "/register", "/login", "/h2-console/**", "*", "/products/**", "/order/**", "/orderProduct/**", "/**", "/categories/**").permitAll()
+                .authorizeRequests().antMatchers("/", "/register", "/login", "/h2-console/**", "*", "/products/**", "/order/**", "/orderProduct/**", "/categories/**", "/**").permitAll()
                 .antMatchers("/newPizza", "/update").hasRole("ADMIN")
                 .anyRequest().authenticated();
 

@@ -1,10 +1,10 @@
 <div class="content">
   <h2>Products list</h2>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field>
     <mat-label>Choose a category</mat-label>
     <mat-select [(ngModel)]="selectedCategory" (ngModelChange)="onCategoryChange($event)" >
-      <mat-option *ngFor="let category of categories" [value]="category.name">
+      <mat-option *ngFor="let category of categories" [value]="category">
         {{category.name}}
       </mat-option>
     </mat-select>
@@ -15,7 +15,7 @@
   <div *ngIf="selectedCategory == null">
     <mat-card>
       <mat-card-content>
-        <h1 style="text-align: center">No any products on the list. Please choose category of products!</h1>
+        <h1 style="text-align: center">No any products on the list. Please choose category of products.</h1>
       </mat-card-content>
     </mat-card>
   </div>
@@ -51,5 +51,5 @@
 
 
 </div>
-<button class="floatingButton" (click)="openProductDialog()">
+<button class="floatingButton" (click)="openProductDialog(this.selectedCategory)">
   <mat-icon>add</mat-icon></button>

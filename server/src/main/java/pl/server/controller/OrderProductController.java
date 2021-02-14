@@ -10,8 +10,6 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/orderProduct")
-//                      |
-//was not wthis bellow _\/
 @RequiredArgsConstructor
 public class OrderProductController {
 

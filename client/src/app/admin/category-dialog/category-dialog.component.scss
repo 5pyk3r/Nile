@@ -1,5 +1,5 @@
 .category-dialog{
-  height: 300px;
+  height: 150px;
   width: 350px;
 }
 .mat-form-field{
@@ -14,16 +14,6 @@
   width: 40px;
   height: 40px;
   color: orange;
-}
-.uploadContainer{
-  padding-right: 6px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.sendFile{
-  padding-right: 12px;
 }
 .saveButton{
   color: white;

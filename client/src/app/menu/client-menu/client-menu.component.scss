@@ -15,8 +15,9 @@
   max-width: 25%;
   padding: 0px 1rem 1rem 0px
 }
-.pizza-card{
+.product-card{
   width: auto;
+
 }
 .add-button{
   float: right;
@@ -55,7 +56,7 @@
   text-align: center;
 }
 .mat-card-image{
-  height: 15vh;
+  height: 26vh;
 }
 .mat-card-content{
   height: 10vh;
@@ -93,4 +94,9 @@
   .actions-buttons{
     padding: 0;
   }
+}
+
+.large-text{
+  text-align: center;
+  padding-top: 10px;
 }

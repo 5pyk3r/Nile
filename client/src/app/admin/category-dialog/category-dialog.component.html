@@ -1,0 +1,32 @@
+<form [formGroup]="categoryForm" >
+  <div class="category-dialog">
+    <mat-dialog-content>
+
+      <mat-dialog-title color="primary">
+        <h1>Add category</h1>
+      </mat-dialog-title>
+      <mat-divider></mat-divider>
+      <div fxLayout="column">
+
+        <mat-form-field>
+          <input
+            autocomplete="off"
+            matInput
+            formControlName="name"
+            placeholder="Category name">
+          <mat-error *ngIf="categoryForm.get('name').hasError('required')">Name is required</mat-error>
+          <mat-error *ngIf="alreadyExists == true">Name is required</mat-error>
+        </mat-form-field>
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+      <button mat-raised-button (click)="close()">Close</button>
+      <button mat-raised-button class="saveButton" (click)="save()">Save</button>
+    </mat-dialog-actions>
+  </div>
+</form>
+
+
+
+

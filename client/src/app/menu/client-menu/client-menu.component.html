@@ -1,19 +1,20 @@
 
 <div class="content">
 <div class="cards-content" fxLayout="row wrap" fxLayoutGap="1rem grid">
-  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let pizza of dataSource" class="test" >
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of dataSource" class="test" >
 
-    <mat-card class="mat-elevation-z4 pizza-card">
-      <img mat-card-image src="https://nile.s3.eu-central-1.amazonaws.com/{{pizza.fileName}}"/>
+    <mat-card class="mat-elevation-z4 product-card">
+      <img mat-card-image src="https://nilebucket.s3.eu-central-1.amazonaws.com/{{product.fileName}}"/>
+      <mat-divider></mat-divider>
       <mat-card-content>
-        <div class="large-text">{{pizza.name}}</div>
+        <div class="large-text">{{product.name}}</div>
 <!--          <span class="ingredients-list" *ngFor="let ingredient of pizza.ingredients; let last = last">-->
 <!--            &nbsp; {{ingredient.name}}{{last? '': ', '}}-->
 <!--          </span>-->
-        <div class="price">{{pizza.price | currency : 'USD'}}</div>
+        <div class="price">{{product.price | currency : 'USD'}}</div>
       </mat-card-content>
       <mat-card-actions>
-        <button  mat-raised-button class="addToCartButton" (click)="addToCart(pizza)"><mat-icon>add_shopping_cart</mat-icon> Add to cart</button>
+        <button  mat-raised-button class="addToCartButton" (click)="addToCart(product)"><mat-icon>add_shopping_cart</mat-icon> Add to cart</button>
       </mat-card-actions>
     </mat-card>
   </div>

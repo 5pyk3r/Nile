@@ -1,7 +1,7 @@
 <div class="login-container">
   <mat-card class="login-card">
     <mat-card-header>
-      <mat-card-title>Log in</mat-card-title>
+      <mat-card-title><h1>Log in</h1></mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <form [formGroup]="loginForm" >
@@ -17,6 +17,7 @@
             <mat-error *ngIf="this.loginForm.get('email').hasError('email')">Email must looks like email</mat-error>
           </mat-form-field>
         <mat-form-field>
+          <mat-icon matSuffix>e-mail</mat-icon>
           <input
             autocomplete="off"
             matInput

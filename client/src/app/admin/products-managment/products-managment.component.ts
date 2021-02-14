@@ -20,11 +20,10 @@ export class ProductsManagmentComponent implements OnInit{
   dateFrom: Date;
   dateTo: Date;
   categories: Category[];
-  selectedCategory: string;
+  selectedCategory: Category;
 
   ngOnInit(): void {
     this.getCategories();
-
     this.dateFrom = new Date();
     this.dateFrom.setHours(0);
     this.dateFrom.setMinutes(0);
@@ -38,19 +37,21 @@ export class ProductsManagmentComponent implements OnInit{
 
   onCategoryChange(selectedCategory){
    this.getProducts();
+   console.log(this.selectedCategory);
+
   }
 
   getProducts(): void{
-    this.productService.findAllProductsByCategory(this.selectedCategory).subscribe(data => this.products = data);
+    this.productService.findAllProductsByCategory(this.selectedCategory.name).subscribe(data => this.products = data);
   }
 
   getCategories(): void{
     this.categoryService.findAllCategories().subscribe(data => this.categories = data);
   }
 
-  openProductDialog(): void{
+  openProductDialog(category): void{
     this.matDialog.open(ProductDialogComponent, {
-      data: {}
+      data: {category}
     }).afterClosed().subscribe(response => this.getProducts());
   }
   editProduct(product): void{
