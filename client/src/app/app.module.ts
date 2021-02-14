@@ -17,7 +17,7 @@ import { RouterModule} from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
 import { MatCardModule} from '@angular/material/card';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MatFormFieldModule} from '@angular/material/form-field';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './login/login.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -42,6 +42,11 @@ import {CoreModule} from './core/core.module';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
 import { CategoriesComponent } from './admin/categories/categories.component';
+import { CategoryDialogComponent } from './admin/category-dialog/category-dialog.component';
+
+const appearance: MatFormFieldDefaultOptions = {
+  appearance: 'outline'
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +67,8 @@ import { CategoriesComponent } from './admin/categories/categories.component';
     OrdersListComponent,
     OrderAcceptationStatusDialogComponent,
     UserPanelComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CategoryDialogComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   imports: [
@@ -103,6 +109,13 @@ import { CategoriesComponent } from './admin/categories/categories.component';
     MatInputModule,
     MatDialogModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: appearance
+    }
+  ],
+
 })
 export class AppModule {}

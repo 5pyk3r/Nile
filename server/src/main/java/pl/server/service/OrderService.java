@@ -1,5 +1,6 @@
 package pl.server.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,16 +16,14 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class OrderService {
 
-    @Autowired
-    private OrderRepository orderRepository;
+    private final OrderRepository orderRepository;
 
     @Transactional
     public ResponseEntity<String> createOrder(Order order) {
         try {
-
-
             Order newOrder = new Order();
 
             List<OrderProduct> orderProducts = order.getProducts();
@@ -53,7 +52,6 @@ public class OrderService {
     public List<Order> findAllByUserId(Long id){
         return orderRepository.findAllByUserId(id);
     }
-
 
     public Order updateOrder(Order order){
         return orderRepository.save(order);
