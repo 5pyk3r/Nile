@@ -4,7 +4,7 @@
 ## Technology stack
 |   Component   |   Technology  |
 | ------------- | ------------- |
-| Frontend      |   Angular 11  |
+| Frontend      |   Angular 10  |
 | Backend       |   Spring 5    |
 | In Memory DB	 |     H2        |
 | Images store  |     AWS S3    |
