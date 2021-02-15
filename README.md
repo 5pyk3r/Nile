@@ -6,7 +6,8 @@
 | ------------- | ------------- |
 | Frontend      |   Angular 11  |
 | Backend       |   Spring 5    |
-| In Memory DB	|     H2        |
+| In Memory DB	 |     H2        |
+| Images store  |     AWS S3    |
 
 ## Requirements to run the application
 
