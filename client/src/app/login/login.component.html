@@ -17,7 +17,6 @@
             <mat-error *ngIf="this.loginForm.get('email').hasError('email')">Email must looks like email</mat-error>
           </mat-form-field>
         <mat-form-field>
-          <mat-icon matSuffix>e-mail</mat-icon>
           <input
             autocomplete="off"
             matInput
@@ -27,8 +26,8 @@
           <mat-error *ngIf="this.loginForm.get('password').hasError('required')">Password is required</mat-error>
         </mat-form-field>
         <mat-card-actions>
-          <button mat-raised-button color="primary" (click)="login()">Login</button>
-          <button mat-raised-button color="primary" routerLink="/register">Register</button>
+          <button mat-raised-button class="button" (click)="login()">Login</button>
+          <button mat-raised-button class="button" routerLink="/register">Register</button>
         </mat-card-actions>
       </form>
     </mat-card-content>

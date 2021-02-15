@@ -1,0 +1,42 @@
+<div class="content">
+
+  <div class="recipeDetails">
+    <div class="mat-elevation-z4">
+      <mat-button mat-icon-button (click)="goBack()">
+        <mat-icon svgIcon="backArrow" class="backButton"></mat-icon>
+      </mat-button>
+      <div  gdAreas="header header | sidebar content  | footer footer"
+            gdColumns="49%!"
+            gdGap="1rem"
+
+            gdAreas.xs="header | sidebar | content  | footer"
+            gdColumns.xs="none"
+            gdGap.xs="1rem"
+
+            gdAreas.sm="header header | sidebar content  | footer footer"
+            gdColumns.sm="120px auto 120px"
+
+            [ngStyle]="{'max-width': 'auto'}"
+            [ngStyle.xs]="{'max-width': '800px'}">
+
+        <div gdArea="header">
+          <h1 class="mat-display-2"> {{product?.name}} </h1>
+        </div>
+        <div gdArea="sidebar">
+          <img class="productImage" src="https://recipebook50.s3.eu-central-1.amazonaws.com/{{product?.fileName}}"/>
+        </div>
+        <div  gdArea="content">
+          <h1 class="mat-display-1">Description</h1>
+          <p class="body-1">{{product?.description}}</p>
+        </div>
+<!--        <div gdArea="footer">-->
+<!--          <h1 class="mat-display-1">Ingredients: </h1>-->
+<!--          <ul>-->
+<!--            <li class="subheading-1" *ngFor="let ingredients of product?.ingredients">{{ingredients.name}}</li>-->
+<!--          </ul>-->
+<!--        </div>-->
+
+      </div>
+    </div>
+  </div>
+</div>

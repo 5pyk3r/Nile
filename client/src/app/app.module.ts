@@ -43,6 +43,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { CategoriesComponent } from './admin/categories/categories.component';
 import { CategoryDialogComponent } from './admin/category-dialog/category-dialog.component';
 import {MatButtonToggle, MatButtonToggleModule} from '@angular/material/button-toggle';
+import { ProductDetailsComponent } from './shopping/product-details/product-details.component';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -67,7 +68,8 @@ const appearance: MatFormFieldDefaultOptions = {
     OrderAcceptationStatusDialogComponent,
     UserPanelComponent,
     CategoriesComponent,
-    CategoryDialogComponent
+    CategoryDialogComponent,
+    ProductDetailsComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   imports: [
