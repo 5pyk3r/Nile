@@ -1,4 +1,4 @@
-package pl.server.controller;
+package pl.server.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

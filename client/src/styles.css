@@ -17,7 +17,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 50px;
   bottom: 20px;
   right: 20px;
-  background-color:  dodgerblue;
+  background-color: #448AFF;
   color: #FFF;
   border-radius: 50px;
   /*border-style: solid;*/
@@ -44,7 +44,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .summary{
   height: 100px;
   border-style: solid;
-  border-color: grey;
+  border-color: #448AFF;
   padding: 20px;
   margin: 20px 0 20px;
   border-radius: 4px;
@@ -63,4 +63,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-card-image:first-child {
   border-top-left-radius: 0 !important;
 }
+.black-text{
+  color: #000000DE !important;
 
+}

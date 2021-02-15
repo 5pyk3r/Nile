@@ -1,16 +1,16 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="background-color: white">
   <mat-toolbar-row>
-    <span class="spacer2" routerLink="/"><h1>Restaurant App</h1></span>
+    <span class="spacer2" routerLink="/"><div class="logo"><img src="/assets/logo.png"/></div></span>
     <span class="spacer"></span>
-    <span *ngIf="!isLoggedIn" routerLink="/login" >Login</span>
+    <span *ngIf="!isLoggedIn" routerLink="/login"><div class="black-text">Login</div></span>
 
-    <button mat-button *ngIf="isLoggedIn == true && roles[0] === 'ROLE_ADMIN'" [matMenuTriggerFor]="adminMenu" (click)="getRoute()"><h2 class="text-white">{{email}}</h2></button>
+    <button mat-button *ngIf="isLoggedIn == true && roles[0] === 'ROLE_ADMIN'" [matMenuTriggerFor]="adminMenu" (click)="getRoute()"><h2 class="black-text">{{email}}</h2></button>
     <mat-menu #adminMenu="matMenu">
       <button mat-menu-item routerLink="/admin" *ngIf="routerUrl != '/admin/**'">Admin Panel</button>
       <button mat-menu-item (click)="logout()" routerLink="/menu">Logout</button>
     </mat-menu>
 
-    <button mat-button *ngIf="isLoggedIn == true && roles[0] === 'ROLE_USER'" [matMenuTriggerFor]="userMenu" (click)="getRoute()"><h2 class="text-white">{{email}}</h2></button>
+    <button mat-button *ngIf="isLoggedIn == true && roles[0] === 'ROLE_USER'" [matMenuTriggerFor]="userMenu" (click)="getRoute()"><h2 class="black-text">{{email}}</h2></button>
     <mat-menu #userMenu="matMenu">
       <button mat-menu-item routerLink="/userDashboard" *ngIf="routerUrl != '/userDashboard'">User Panel</button>
       <button mat-menu-item routerLink="/menu" *ngIf="routerUrl === '/userDashboard'">Menu</button>

@@ -25,7 +25,6 @@ import { MenuManagementComponent } from './menu/menu-managment/menu-management.c
 import {MatChipsModule} from '@angular/material/chips';
 import { ClientMenuComponent } from './menu/client-menu/client-menu.component';
 import {FlexModule} from '@angular/flex-layout';
-import { ShoppingCartComponent } from './shopping/shopping-cart/shopping-cart.component';
 import { CartButtonComponent } from './shopping/cart-button/cart-button.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -43,6 +42,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
 import { CategoriesComponent } from './admin/categories/categories.component';
 import { CategoryDialogComponent } from './admin/category-dialog/category-dialog.component';
+import {MatButtonToggle, MatButtonToggleModule} from '@angular/material/button-toggle';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -58,7 +58,6 @@ const appearance: MatFormFieldDefaultOptions = {
     ToolbarComponent,
     MenuManagementComponent,
     ClientMenuComponent,
-    ShoppingCartComponent,
     CartButtonComponent,
     CartDialogComponent,
     CheckoutComponent,
@@ -101,7 +100,8 @@ const appearance: MatFormFieldDefaultOptions = {
     MatMenuModule,
     CoreModule,
     MatPaginatorModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonToggleModule
   ],
   exports: [
     MatButtonModule,

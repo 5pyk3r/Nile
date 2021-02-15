@@ -1,4 +1,4 @@
-package pl.server.controller;
+package pl.server.api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

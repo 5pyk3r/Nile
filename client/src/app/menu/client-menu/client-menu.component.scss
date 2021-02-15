@@ -35,7 +35,8 @@
   padding: 0 16px;
   border-radius: 4px;
   margin-right: 1rem;
-  color: black;
+  color: white;
+  background-color: #448AFF;
   max-height: 40px;
   border-left: none !important;
   width: 100%;
@@ -45,7 +46,7 @@
   line-height: 0;
 }
 .mat-button-toggle-checked.mat-button-toggle-appearance-standard{
-  background-color:  #9965f4;
+  background-color:  #448AFF;
   margin-right: 1rem;
   color: white;
 }
@@ -99,4 +100,16 @@
 .large-text{
   text-align: center;
   padding-top: 10px;
+}
+.button {
+  padding: 0 16px;
+  border-radius: 4px;
+  margin-right: 1rem;
+  background-color: transparent;
+  color: black;
+  max-height: 40px;
+  border-left-color: #448AFF !important;
+  border-left-width: medium !important;
+  border-style: solid;
+  border-color: #448AFF;
 }
