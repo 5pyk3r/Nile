@@ -1,5 +1,5 @@
 # Nile - e-commerce app with electronics. 
-## Nile made with Angular 11 and Spring
+### Nile made with Angular 11 and Spring
  
 ## Technology stack
 |   Component   |   Technology  |
@@ -32,15 +32,17 @@
    
  ## Application development ideas
    Still a lot to do in project in the near future:
-     - search engine with e.g: ElasticSearch on toolbar
-     - clients comments and rating(0-5 stars) under product that client ordered
-     - pagination
-     - gallery with slider of some products on main page with managment on admin 
-     - better UI 
-     - user panel with more functionality like: setting, change password, address, e-mail, etc.
-     - AWS based e-mail sender when: user register, password changing(with some tokenization),  email user when he order products and receive products
-     - AWS store full app
-     - statistics of sale on admin page(charts)
+   
+   - search engine with e.g: ElasticSearch on toolbar
+   - clients comments and rating(0-5 stars) under product that client ordered
+   - pagination
+   - gallery with slider of some products on main page with managment on admin 
+   - better UI 
+   - user panel with more functionality like: setting, change password, address, e-mail, etc.
+   - AWS based e-mail sender when: user register, password changing(with some tokenization),  email user when he order products and receive products
+   - Host full app(frontend, backend, db) on AWS 
+   - statistics of sale on admin page(charts)
+  
      
 ### Home Page
 ![Home page]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/home.PNG)
