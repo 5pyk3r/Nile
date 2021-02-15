@@ -1,4 +1,4 @@
-package pl.server.controller;
+package pl.server.api;
 
 
 import lombok.RequiredArgsConstructor;

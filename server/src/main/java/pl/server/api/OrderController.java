@@ -1,4 +1,4 @@
-package pl.server.controller;
+package pl.server.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.server.model.Order;
-import pl.server.repository.OrderRepository;
 import pl.server.service.OrderService;
 
 import java.io.IOException;
