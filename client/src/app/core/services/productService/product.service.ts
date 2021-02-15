@@ -26,6 +26,9 @@ export class ProductService {
   findProductByName(name): Observable<boolean> {
     return this.http.get<boolean>( URL + `?name=${name}`);
   }
+  findProductById(id): Observable<Product> {
+    return this.http.get<Product>( URL + `?id=${id}`);
+  }
   updateProductById(id, product: FormData): Observable<any>{
     return this.http.put(URL + `/${id}`, product);
   }
