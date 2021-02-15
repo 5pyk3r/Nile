@@ -28,7 +28,7 @@
    
    Admin role:
    - adding, editing, delete product in specific category
-   - adding, editing, delete 
+   - adding, editing, delete category
    
  ## Application development ideas
    Still a lot to do in project in the near future:
