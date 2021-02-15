@@ -1,5 +1,5 @@
 # Nile - e-commerce app with electronics. 
-# Nile made with Angular 11 and Spring
+## Nile made with Angular 11 and Spring
  
 ## Technology stack
 |   Component   |   Technology  |
@@ -42,8 +42,20 @@
      - AWS store full app
      - statistics of sale on admin page(charts)
      
- ### Home Page
-![Home page]( )
+### Home Page
+![Home page]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/home.PNG)
+### Cart
+![Cart]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/cart.PNG)
+### Admin panel - category list
+![Admin panel]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/admin-category-list.PNG)
+### Admin panel - products list
+![Admin panel]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/admin-products-list.PNG)
+### Swagger API visualization
+![Products]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/swagger-products.PNG)
+![Orders]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/orders-swagger.PNG)
+![Categories]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/category.PNG)
+![Other endpoints]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/swagger.PNG)
+
 
 
 
