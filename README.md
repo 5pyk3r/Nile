@@ -53,7 +53,7 @@
 ![Admin panel]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/admin-category-list.PNG)
 ### Admin panel - products list
 ![Admin panel]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/admin-products-list.PNG)
-### Swagger API visualization
+### Swagger visualization of REST API 
 ![Products]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/swagger-products.PNG)
 ![Orders]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/orders-swagger.PNG)
 ![Categories]( https://raw.githubusercontent.com/5pyk3r/Nile/master/screenshots/category.PNG)
